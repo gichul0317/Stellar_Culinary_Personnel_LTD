@@ -5,9 +5,9 @@ import './App.css';
 
 function App() {
   return (
-    <main className="container d-flex flex-column justify-content-center py-5">
+    <main className="container pt-5">
       <h1 style={{ textAlign: 'center' }}>ToDo Kanban Board</h1>
-      <div className="row rows-cols-1 rows-cols-md-3 text-center py-5">
+      <div className="row rows-cols-1 rows-cols-md-3 text-center pt-5">
         <KanbanBoard />
       </div>
     </main>
