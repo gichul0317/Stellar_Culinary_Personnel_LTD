@@ -43,7 +43,7 @@ function KanbanBoard(props) {
         {/* inprogress board */}
         <div className="col">
           <div className="card mb-4 rounded-3 shadow-sm">
-            <Lists title="To Do" onDragEnd={onDragEnd} name="inprogress">
+            <Lists title="In Progress" onDragEnd={onDragEnd} name="inprogress">
               {items.inprogress.map((item, index) => (
                 <Draggable
                   key={item.uuid}
@@ -69,7 +69,7 @@ function KanbanBoard(props) {
         {/* done board */}
         <div className="col">
           <div className="card mb-4 rounded-3 shadow-sm">
-            <Lists title="To Do" onDragEnd={onDragEnd} name="done">
+            <Lists title="Done" onDragEnd={onDragEnd} name="done">
               {items.done.map((item, index) => (
                 <Draggable
                   key={item.uuid}
