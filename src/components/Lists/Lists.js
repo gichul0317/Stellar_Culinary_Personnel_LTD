@@ -1,13 +1,23 @@
 import React from 'react';
+import { Droppable } from 'react-beautiful-dnd';
 
-function Lists(props) {
+function Lists({ title, name, children }) {
   return (
-    <div className="card mb-4 rounded-3 shadow-sm">
+    <>
       <div className="card-header py-3">
-        <h3>{props.title}</h3>
+        <h3>{title}</h3>
       </div>
-      <div className="card-body" style={{ minHeight: '700px' }}></div>
-    </div>
+      <div className="card-body" style={{ minHeight: '700px' }}>
+        <Droppable droppableId={name}>
+          {(provided, snapshot) => (
+            <div ref={provided.innerRef}>
+              {children}
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
+      </div>
+    </>
   );
 }
 
