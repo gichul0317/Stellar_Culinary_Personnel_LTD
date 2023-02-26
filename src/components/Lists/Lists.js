@@ -10,7 +10,10 @@ function Lists({ title, name, children }) {
       <div className="card-body p-1" style={{ minHeight: '700px' }}>
         <Droppable droppableId={name}>
           {(provided, snapshot) => (
-            <div ref={provided.innerRef}>
+            <div
+              ref={provided.innerRef}
+              className={snapshot.isDraggingOver ? 'bg-warning' : ''}
+            >
               {children}
               {provided.placeholder}
             </div>
